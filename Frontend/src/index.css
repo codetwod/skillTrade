@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.App{
+    width: 100vw;
+    height: 100%;
+    background: #000;
+
+    min-height: 100vh;
+}
+.nnn{
+    background-color: rgba(107, 112, 117, 0.366);
+    border-radius: 10px;
+    margin: 10px;
+}   
+.nnn:hover{
+    background-color: rgba(107, 112, 117, 0.699);
+}
+.navb{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.loo{
+    display: inline-block;
+}
+.navbar{
+    padding: 10px;
+}
+.homepage{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    display: flex;
+}
+
+
+/*sign up login page*/
+.loginsignpage{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.info{
+    max-width: 45%;
+}
+.dec{
+font-size: 20px;
+text-align: left;   
+color:rgba(222, 229, 236, 0.366) ;
+}
+.orhandel{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.line{
+    width: 10rem;
+    height: 1px;
+    background-color: aliceblue;
+}
+.bluee{
+    color: rgba(71, 135, 238, 0.821);
+}
+.signlog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 15px;
+    width: 100%;
+    padding: 5px;
+    border:2px solid rgba(129, 137, 144, 0.366) ;
+    border-radius: 5px;
+}
+.googleimage{
+    width: 23px;
+}
+.imagess{
+    margin-top: 40px;
+}
+.mainimage{
+    width: 430px;
+    position: relative;
+    bottom: 50%;
+}
+.frameimage{
+    width: 430px;
+    position: relative;
+    left: 15px;
+    top: 15px;
+}
+.email{
+    font-size: 15px;
+    text-align: left;
+}
+.signform{
+    margin-top: 30px;
+    text-align: left;
+}
+.inputt{
+    width: 100%;
+    background-color:rgb(22 29 41);
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin: 8px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+.watch{
+    height: 0px;
+    position: relative;
+    left: 92%;
+    bottom: 45px;
+    font-size: 25px;
+}
+.forget{
+    height: 0px;
+    position: relative;
+    font-size: 13px;
+    left: 75%;
+    bottom: 40px;
+    color: rgba(71, 135, 238, 0.821);
+}
+.signnnn{
+    width: 100%;
+    background-color: #EE6D4C;
+    color: black;
+    font-size: 18px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.input_text{
+    width:100%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.names{
+    display: flex;
+    gap: 20px;
+    text-align: left;
+}
+.ggg{
+    padding-left: 18px;
+}
+.signff{
+    text-align: left;
+}
+
+.passwordss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.ggg{
+    margin-bottom: 10px;
+}
+.instrouctor{
+
+}
+.student:hover{
+    background-color: aqua;
+}
+.selections{
+    display: flex;
+    width: 40%;
+    margin:20px;
+    margin-bottom: 0px;
+    justify-content: space-evenly;
+    align-items: center; 
+    border-radius: 50px;
+    height: 40px;
+    background-color: rgb(22 29 41);
+}
+.same{
+    background-color: rgb(54, 51, 51);
+    height: 30px;
+    width: 90px;
+    padding-left: 8px;
+    border-radius: 40px;
+}
+h1{
+    color: aliceblue;
+}
