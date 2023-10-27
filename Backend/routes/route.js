@@ -1,0 +1,11 @@
+const express=require('express');
+const router=express.Router();
+const{login}=require('../controller/login');
+const{signup}=require('../controller/signup');
+const{addDetails}=require('../controller/skillMetadata');
+const { createPost } = require('../controller/createPost');
+router.post("/signup",signup);
+router.post("/login",login);
+router.post("/userMetadata",addDetails);
+router.post("/createpost",createPost);
+module.exports=router;
