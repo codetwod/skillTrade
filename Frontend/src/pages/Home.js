@@ -5,8 +5,10 @@ import Posts from '../components/Posts';
 import SkillsDemanded from '../components/Home/SkillsDemanded';
 
 import Footer from '../components/Home/Footer';
+import usePro from '../Hooks/usePro';
 const Home = ({informations}) => {
-    
+    // const {informations,fectData,loading} = usePro();
+ 
   return (
     <div className='bg-[#E0FBFC] h-screen' >
         <div className='w-full h-[70%] flex justify-center items-center'>
@@ -32,7 +34,7 @@ const Home = ({informations}) => {
         <Posts informations = {informations}/>
         <SkillsDemanded informations={informations}/>
         <Footer/>
- 
+
     </div>
   )
 }

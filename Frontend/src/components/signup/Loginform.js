@@ -20,7 +20,7 @@ function Loginform({setIsLogedIn}){
         
         setIsLogedIn(true);
         toast.success("logged in");
-        navigate("/dashbord");
+        navigate("/profilePerson");
         console.log(formData);
     }
     return(
