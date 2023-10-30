@@ -8,6 +8,7 @@ import { useState } from "react";
 import data from "./data";
 import Profilepage from "./pages/Profilepage";
 import UserProfile from "./pages/UserProfile";
+import UserInfo from "./pages/UserInfo";
 function App() {
   const informations = data;
   const [isLogedIn , setIsLogedIn ] = useState(false);
@@ -21,6 +22,7 @@ function App() {
         <Route path = "/profilePerson" element = {<ProfilePerson informations={informations} isLogedIn= {isLogedIn} setIsLogedIn={setIsLogedIn}/>}/>
         <Route path = "/profile" element = {<Profilepage informations = {informations}/>}/>
         <Route path = "/userprofile" element = {<UserProfile informations={informations}/>}/>
+        <Route path = "/userinfo" element = {<UserInfo/>}/>
       </Routes>
 
     </div>

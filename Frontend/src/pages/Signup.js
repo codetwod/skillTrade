@@ -2,7 +2,6 @@
 import Templets from "../components/signup/Templates";
 import signupImg from "../assets/images/signup.png";
 function SignUp({setIsLogedIn}){
-    
     return(
         <div className="text-white">
             <Templets
