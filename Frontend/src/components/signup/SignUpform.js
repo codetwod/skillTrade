@@ -3,13 +3,12 @@ import { toast } from "react-hot-toast";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
-const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
 function SignUpform({setIsLogedIn}){
     const [formData ,setformData] = useState({email:"",password:"",firstName:"",lastName:"",username:""});
     const [showpassword , setshowpassword] = useState(false);
     const [showpassword1 , setshowpassword1] = useState(false);
-    const [accountType , setaccountType] = useState("student");
+
     const navigate = useNavigate();
     function changeHandler (event){
         setformData(prevdata =>{
@@ -20,35 +19,32 @@ function SignUpform({setIsLogedIn}){
         });
     }
     async function submithandler(event){
+      console.log('handler called');
         event.preventDefault();
-        if(formData.confirmpassword !== formData.createpassword)
-        {
-            toast.error("Password do not match");
-            return;
-        }
+        // if(formData.confirmpassword !== formData.createpassword)
+        // {
+        //     toast.error("Password do not match");
+        //     return;
+        // }
 
         setIsLogedIn(true);
         
         const adata = {
-            ...formData,
-            accountType
+            ...formData
         } 
    
         console.log(adata);
         try {
-            const response = await fetch(`http://localhost:4000/api/v1?api_key=${API_KEY}`, {
+            // const path=process.env.SERVER;
+            console.log('inside try block');
+            const response = await fetch(`http://localhost:4000/api/v1/signup`, {
               method: 'POST',
               headers: {
-                "email":"",
-                "password":"",
-                "firstName":"",
-                "lastName":"",
-                "username":""
-                // 'Content-Type': 'application/json',
+              'Content-Type': 'application/json',
               },
               body: JSON.stringify(formData),
             });
-      
+            console.log('post method done');
             if (response.ok) {
               const data = await response.json();
               console.log(data); // You can handle the response data here
@@ -131,25 +127,7 @@ function SignUpform({setIsLogedIn}){
       <br/>
       </div>
         <div className="text-white passwordss">
-            <div>
-            <label className="text-white ggg">create password
-                <input 
-                required
-                className="text-white inputt iii"
-                    type={showpassword1 ? ("text") : ("password")}
-                    name="createpassword"
-                    placeholder="Enter password"
-                    onChange={changeHandler}
-                    
-                />
-                <span className="watch" onClick={()=>{setshowpassword1((prev) => !prev);}}>
-                    {(showpassword1 === true) ?
-                    (<AiOutlineEye />):
-                    (<AiOutlineEyeInvisible/>)
-                    }
-                </span>
-                </label>
-            </div>
+            
             <div>
             <label className="text-white ggg">confirm password</label>
             
@@ -157,10 +135,10 @@ function SignUpform({setIsLogedIn}){
                 required
                 className="text-white inputt iii"  
                     type={showpassword ? ("text") : ("password")}
-                    name="confirmpassword"
+                    name="password"
                     placeholder="Enter password"
                     onChange={changeHandler}
-                    
+                    value={formData.password}
                 />
                 <span className="watch" onClick={()=>{setshowpassword((prevs) => !prevs);}}>
                     {(showpassword === true) ?

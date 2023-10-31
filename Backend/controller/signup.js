@@ -4,15 +4,15 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 exports.signup = async (req, res) => {
     try {
-        const { email, username, password } = req.body;
-        if (!username || !email || !password) {
+        const { email, username, password ,firstname,lastname} = req.body;
+        if (!username || !email || !password || !firstname) {
             console.log("Not all fields provided...");
             return res.status(400).json({
                 status: 400,
                 message: "Please fill all fields",
             });
         }
-
+        const name=firstname+"  "+lastname;
         // Convert the username to lowercase
         const lowercaseUsername = username.toLowerCase();
 
@@ -29,6 +29,7 @@ exports.signup = async (req, res) => {
 
         const userData = await user.create({
             email,
+            name,
             username: lowercaseUsername, // Store the lowercase username
             password: hashedPassword,
         });
